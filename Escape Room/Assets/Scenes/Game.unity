@@ -1024,7 +1024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963523457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 9.55, y: 4.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7325,6 +7325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947798810}
   - component: {fileID: 1947798809}
+  - component: {fileID: 1947798811}
   m_Layer: 0
   m_Name: HPPF
   m_TagString: Untagged
@@ -7370,9 +7371,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1561696521
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -2082923221
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 19fb725af9b80bb4fbd89e47543cc294, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7392,13 +7393,58 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947798808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 1, z: 0}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1947798811
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947798808}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.3956912, y: 0.16712485}
+  - {x: -1.1902034, y: 0.16675813}
+  - {x: -1.1899791, y: 0.9209631}
+  - {x: -1.1395521, y: 0.90500176}
+  - {x: -1.0899681, y: 0.90504247}
+  - {x: -1.0900174, y: 0.9150909}
+  - {x: -1.0698758, y: 0.9150997}
+  - {x: -1.0698266, y: 0.9248736}
+  - {x: -1.0598248, y: 0.92490333}
+  - {x: -1.0599551, y: 0.93496615}
+  - {x: -1.0498619, y: 0.93501735}
+  - {x: -1.0498375, y: 1.0052295}
+  - {x: 0.29397947, y: 1.0053419}
+  - {x: 0.3383408, y: 0.9746944}
+  - {x: 0.4160403, y: 1.0053267}
+  - {x: 0.9997427, y: 1.0040531}
+  - {x: 1.0761012, y: 0.9805866}
+  - {x: 1.1082006, y: 1.0047861}
+  - {x: 1.1698916, y: 1.0050213}
+  - {x: 1.1699218, y: 0.994942}
+  - {x: 1.1799829, y: 0.99481744}
+  - {x: 1.1799881, y: 0.98497945}
+  - {x: 1.1899794, y: 0.9849229}
+  - {x: 1.191077, y: 0.4507364}
+  - {x: 1.4069524, y: 0.44974664}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!4 &2049172056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2955570679262669401, guid: c3186db733c831f46abb50da4e66bd6f, type: 3}
