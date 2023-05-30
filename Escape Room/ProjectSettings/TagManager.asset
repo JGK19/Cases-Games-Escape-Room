@@ -44,6 +44,12 @@ TagManager:
   - name: Fundo
     uniqueID: 2212044075
     locked: 0
+  - name: Portas
+    uniqueID: 1006431879
+    locked: 0
+  - name: Parede
+    uniqueID: 1483091593
+    locked: 0
   - name: Player
     uniqueID: 2733270775
     locked: 0
