@@ -22,7 +22,7 @@ public class PlayerControl : MonoBehaviour
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
             if (input.x != 0) input.y = 0;
-            if(input != Vector2.zero)
+            /*if(input != Vector2.zero)
             {
                 animator.SetFloat("MoveX", input.x);
                 animator.SetFloat("MoveY", input.y);
@@ -30,8 +30,8 @@ public class PlayerControl : MonoBehaviour
                 targetPos.x += input.x;
                 targetPos.y += input.y;
                 StartCoroutine(Move(targetPos));
-            }
-        }
+            }*/
+        
 
             
             if(input != Vector2.zero) { 
