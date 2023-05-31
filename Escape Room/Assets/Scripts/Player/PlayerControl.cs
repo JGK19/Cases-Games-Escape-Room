@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public Rigidbody2D body;
     public float moveSpeed;
     private bool isMoving;
     private Vector2 input;
@@ -19,7 +20,7 @@ public class PlayerControl : MonoBehaviour
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
             if (input.x != 0) input.y = 0;
-<<<<<<< Updated upstream
+
             if(input != Vector2.zero)
             {
                 animator.SetFloat("MoveX", input.x);
@@ -30,7 +31,7 @@ public class PlayerControl : MonoBehaviour
                 StartCoroutine(Move(targetPos));
             }
         }
-=======
+
             
             if(input != Vector2.zero) { 
             animator.SetFloat("MoveX", input.x);
@@ -49,7 +50,7 @@ public class PlayerControl : MonoBehaviour
         if (input.x != 0 || input.y != 0) isMoving = true;
         if (input.x == 0 && input.y == 0) isMoving = false;
 
->>>>>>> Stashed changes
+
         animator.SetBool("isMoving", isMoving);
     }
     IEnumerator Move(Vector3 targetPos)
