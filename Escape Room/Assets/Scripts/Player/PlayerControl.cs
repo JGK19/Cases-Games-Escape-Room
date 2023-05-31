@@ -22,22 +22,35 @@ public class PlayerControl : MonoBehaviour
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
             if (input.x != 0) input.y = 0;
+            if(input != Vector2.zero)
+            {
+                animator.SetFloat("MoveX", input.x);
+                animator.SetFloat("MoveY", input.y);
+                var targetPos = transform.position;
+                targetPos.x += input.x;
+                targetPos.y += input.y;
+                StartCoroutine(Move(targetPos));
+            }
+        }
+
             
-            
+            if(input != Vector2.zero) { 
             animator.SetFloat("MoveX", input.x);
             animator.SetFloat("MoveY", input.y);
-            
+        }
 
-            /*var targetPos = transform.position;
-            targetPos.x += input.x;
-            targetPos.y += input.y;*/
 
-            body.velocity = input.normalized * moveSpeed; //* Time.fixedDeltaTime; não funciona por alguma razão quando multiplica pelo deltatime
+        /*var targetPos = transform.position;
+        targetPos.x += input.x;
+        targetPos.y += input.y;*/
+
+        body.velocity = input.normalized * moveSpeed; //* Time.fixedDeltaTime; não funciona por alguma razão quando multiplica pelo deltatime
 
                 //StartCoroutine(Move(targetPos));
             
         if (input.x != 0 || input.y != 0) isMoving = true;
         if (input.x == 0 && input.y == 0) isMoving = false;
+
 
         animator.SetBool("isMoving", isMoving);
 
