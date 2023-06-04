@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class cartão_surge : MonoBehaviour
 {
-    public Transform cartão1_1;
-    public SpriteRenderer cartão1;
+   [SerializeField] private GameObject cartão1;
+   [SerializeField] private GameObject cartão2;
+   [SerializeField] private GameObject cartão3;
+   [SerializeField] private GameObject cartão4;
+  
     void Update ()
     {
-        if (cartão1.GetComponent<SpriteRenderer>().enabled==false)
-        {
-            cartão1_1.GetComponent<SpriteRenderer>().enabled=true;
-        }
+     
     }
     
 }
