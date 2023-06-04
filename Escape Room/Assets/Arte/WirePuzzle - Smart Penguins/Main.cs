@@ -23,10 +23,4 @@ public class Main : MonoBehaviour
             //Abrir porta e terminar puzzle
         }
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R)) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
 }
