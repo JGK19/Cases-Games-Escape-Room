@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-
-
-public class PortaCima : MonoBehaviour
+public class OutrasPortas : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject playerFinal;
     private Animator _animator;
+    // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -18,7 +14,5 @@ public class PortaCima : MonoBehaviour
     public void Abre()
     {
         _animator.SetBool("Aberto", true);
-        playerFinal.SetActive(true);
-        player.SetActive(false);
     }
 }

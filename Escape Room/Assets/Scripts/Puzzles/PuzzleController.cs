@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;   
-
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+[RequireComponent(typeof(Collider2D))]
 public class PuzzleController : MonoBehaviour
 {
     private bool b1, b2, b3, b4, b5, b6;
@@ -15,6 +16,8 @@ public class PuzzleController : MonoBehaviour
     [SerializeField] private GameObject stage4;
     [SerializeField] private GameObject stage5;
     [SerializeField] private GameObject stage6;
+    [SerializeField] private Timer t;
+    public string Perdeu, Ganhou;
 
     void Start()
     {
@@ -24,6 +27,10 @@ public class PuzzleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (t.timeValue <= 0)
+        {
+            Menu(t.timeValue);
+        }
         if (b1 == true)
         {
             stage1.SetActive(true);
@@ -59,6 +66,23 @@ public class PuzzleController : MonoBehaviour
             _puzzleFeito.Invoke();
             puzzlePanel.SetActive(false);
         }
+    }
+    private void OnTriggerEnter2D(Collider2D colission)
+    {
+        Menu(t.timeValue);
+    }
+    public void Menu(float tempoFaltando)
+    {
+        if (tempoFaltando <= 0)
+        {
+            SceneManager.LoadScene(Perdeu);
+        }
+        else
+        {
+            SceneManager.LoadScene(Ganhou);
+        }
+
+
     }
     public void CloseWindow()
     {
