@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
 {
 
     public GameObject pauseMenu;
+    public GameObject ui1,ui2;
     public static bool ispaused = false;
     // Start is called before the first frame update
     void Start()
@@ -17,12 +18,14 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ((!ui1.activeSelf) && (!ui2.activeSelf)) { 
         if(Input.GetKeyDown(KeyCode.Escape)) {
             if(ispaused) {
                 resumeGame();
             } else {
                 pauseGame();
             }
+        }
         }
     }
 

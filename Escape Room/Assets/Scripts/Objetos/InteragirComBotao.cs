@@ -9,17 +9,19 @@ public class InteragirComBotao : MonoBehaviour
     private Interacao _jogadorInterage;
     [SerializeField]
     private UnityEvent _botaoApertado;
-
+    public GameObject PauseMenu;
     private bool _podeExecutar;
+    public GameObject _seta;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _seta.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!PauseMenu.activeSelf) { 
         if (_podeExecutar)
         {
             if(_jogadorInterage.Interagindo == true)
@@ -29,13 +31,16 @@ public class InteragirComBotao : MonoBehaviour
 
             }
         }
+        }
     }
     private void OnTriggerEnter2D(Collider2D colission)
     {
+        _seta.SetActive(true);
         _podeExecutar = true;
     }
     private void OnTriggerExit2D(Collider2D colission)
     {
+        _seta.SetActive(false);
         _podeExecutar = false;
     }
 }
