@@ -728,9 +728,9 @@ MonoBehaviour:
   _botaoApertado:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1839217129}
-        m_TargetAssemblyTypeName: OutrasPortas, Assembly-CSharp
-        m_MethodName: Abre
+      - m_Target: {fileID: 602197099}
+        m_TargetAssemblyTypeName: Puzzle_papeis, Assembly-CSharp
+        m_MethodName: open_puzzle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5001,9 +5001,9 @@ MonoBehaviour:
   _botaoApertado:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 602197099}
-        m_TargetAssemblyTypeName: Puzzle_papeis, Assembly-CSharp
-        m_MethodName: open_puzzle
+      - m_Target: {fileID: 745147251}
+        m_TargetAssemblyTypeName: OutrasPortas, Assembly-CSharp
+        m_MethodName: Abre
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
