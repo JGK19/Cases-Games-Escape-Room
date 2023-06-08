@@ -4723,7 +4723,7 @@ MonoBehaviour:
   _puzzleCompleto:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 912068910}
+      - m_Target: {fileID: 1839217129}
         m_TargetAssemblyTypeName: OutrasPortas, Assembly-CSharp
         m_MethodName: Abre
         m_Mode: 1
