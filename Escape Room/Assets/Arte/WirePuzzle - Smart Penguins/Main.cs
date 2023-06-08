@@ -8,7 +8,6 @@ public class Main : MonoBehaviour
     static public Main Instance;
 
     private int switchCount = 4;
-    public GameObject winText;
     private int onCount = 0;
 
     private void Awake()
@@ -19,7 +18,6 @@ public class Main : MonoBehaviour
         onCount = onCount + points;
         if (onCount == switchCount)
         {
-            winText.SetActive(true);
             //Abrir porta e terminar puzzle
         }
     }
