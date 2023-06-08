@@ -12,6 +12,7 @@ public class InteragirComBotao : MonoBehaviour
     public GameObject PauseMenu;
     private bool _podeExecutar;
     public GameObject _seta;
+    public GameObject abriu;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class InteragirComBotao : MonoBehaviour
             if(_jogadorInterage.Interagindo == true)
             {
                 _botaoApertado.Invoke();
-
+                    
 
             }
         }
@@ -35,7 +36,11 @@ public class InteragirComBotao : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D colission)
     {
-        _seta.SetActive(true);
+        if (abriu.activeSelf)
+        {
+            _seta.SetActive(true);
+        }
+        
         _podeExecutar = true;
     }
     private void OnTriggerExit2D(Collider2D colission)
