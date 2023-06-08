@@ -27,9 +27,9 @@ public class Puzzle_papeis : MonoBehaviour
     void Start()
     {
         resposta.Add(button1);
-        resposta.Add(button2);
-        resposta.Add(button3);
         resposta.Add(button4);
+        resposta.Add(button3);
+        resposta.Add(button2);
         puzzle.SetActive(false);
     }
 
