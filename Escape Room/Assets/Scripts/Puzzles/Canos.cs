@@ -21,6 +21,7 @@ public class Canos : MonoBehaviour
         if(gManager.pingente == true)
         {
         puzzle.SetActive(false);
+        interacao.SetActive(false);
         }
         if(Input.GetKeyDown(KeyCode.E) && canShowPuzzel)
         {
@@ -33,28 +34,22 @@ public class Canos : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
         canShowPuzzel = true;
+        interacao.SetActive(true);
         }
   
         if (collision.CompareTag("Player") && gManager.pingente == true)
         {
         canShowPuzzel = false;
         }
-
-        if (collision.CompareTag("Player"))
-        {
-        interacao.SetActive(true);
-        }        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
+        {
         canShowPuzzel = false;
-
-        if (collision.CompareTag("Player"))
         canos.SetActive(false);
-
-        if (collision.CompareTag("Player"))
         interacao.SetActive(false);       
+        }
     }
 }
