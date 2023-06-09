@@ -3191,7 +3191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &257812241
 Transform:
   m_ObjectHideFlags: 0
@@ -10938,6 +10938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b458ff6ae9ec5ea4c9f9df8d246aec9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dentro: {fileID: 211565000}
+  card: {fileID: 257812240}
 --- !u!212 &1000933824
 SpriteRenderer:
   m_ObjectHideFlags: 0
