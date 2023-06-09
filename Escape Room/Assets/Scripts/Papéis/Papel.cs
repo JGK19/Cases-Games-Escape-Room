@@ -5,6 +5,7 @@ using UnityEngine;
 public class Papel : MonoBehaviour
 {    
     public SpriteRenderer papel1_1;
+    public GameObject Seta;
     private bool triggerEntered;
     void Update ()
     {
@@ -18,13 +19,14 @@ public class Papel : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D (Collider2D collision)
-    {  
+    {
+        Seta.SetActive(true);
            triggerEntered = true;
         
     }
     private void OnTriggerExit2D (Collider2D collision)
     {
            triggerEntered = false;
-        
+        Seta.SetActive(false);
     }
 }
