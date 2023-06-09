@@ -20,14 +20,14 @@ public class Perdeu : MonoBehaviour
     [SerializeField] private PortaPuzzleFio fManager;
     public cartão_colisão q;
     private int k=-3000;
-    private bool aux;
+    private bool aux,aux2;
     int l,m=-1500;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        aux = true;
+        aux =aux2= true;
     }
 
     // Update is called once per frame
@@ -51,11 +51,12 @@ public class Perdeu : MonoBehaviour
             k += 1000;
             gManager.pingente = false;
         }
-        else if (pManager.complete == true)
+        else if (pManager.complete == true&& aux2==true)
         {
             _papeis.SetActive(true);
             k += 1500;
             pManager.complete = false;
+            aux2 = false;
         }
         else if (fManager.feito == true && aux == true)
         {
@@ -65,16 +66,16 @@ public class Perdeu : MonoBehaviour
             aux = false;
 
         }
-        else if (q.qtd>0) {
+        else if (q.qtd>=0) {
             l = q.qtd;
             k += l * 375;
-            q.qtd = 0;
+            q.qtd = -1;
             _cartoes.SetActive(true);
             m += l * 375;
             if (q.qtd == 4) { _cards.text = "Cartões     " + m; 
             }
             else
-            _cards.text = "Cartões     -" + m;
+            _cards.text = "Cartões     " + m;
 
 
         }

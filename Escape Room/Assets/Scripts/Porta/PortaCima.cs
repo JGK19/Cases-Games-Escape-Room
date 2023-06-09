@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class PortaCima : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    
     [SerializeField] private GameObject playerFinal;
     private Animator _animator;
     void Start()
@@ -18,7 +18,7 @@ public class PortaCima : MonoBehaviour
     public void Abre()
     {
         _animator.SetBool("Aberto", true);
-        player.SetActive(false);
+        
         playerFinal.SetActive(true);
         
     }

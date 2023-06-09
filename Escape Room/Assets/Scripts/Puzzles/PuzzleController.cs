@@ -20,6 +20,7 @@ public class PuzzleController : MonoBehaviour
     [SerializeField] private GameObject _ganhou;
     [SerializeField] private GameObject _perdeu;
     [SerializeField] private GameObject _tempo;
+    [SerializeField] private Animator player;
     public GameObject puzzleFio;
     public GameObject puzzlePapel;
     public GameObject puzzleCano;
@@ -72,9 +73,12 @@ public class PuzzleController : MonoBehaviour
         if ((b1==true && b2==true)&&(b6==true &&((b2==true && b3==true)&&(b4==true && b5 == true))))
         {
             puzzlePanel.SetActive(false);
+            player.SetBool("Ganhou", true);
             _puzzleFeito.Invoke();
             puzzlePanel.SetActive(false);
         }
+       
+
     }
     private void OnTriggerEnter2D(Collider2D colission)
     {
@@ -92,6 +96,7 @@ public class PuzzleController : MonoBehaviour
             puzzleCanoDialogo.SetActive(false);
             puzzleFio.SetActive(false);
             puzzlePapel.SetActive(false);
+            
             _perdeu.SetActive(true);
         }
         else
