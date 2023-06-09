@@ -18,7 +18,8 @@ public class PortaCima : MonoBehaviour
     public void Abre()
     {
         _animator.SetBool("Aberto", true);
-        playerFinal.SetActive(true);
         player.SetActive(false);
+        playerFinal.SetActive(true);
+        
     }
 }

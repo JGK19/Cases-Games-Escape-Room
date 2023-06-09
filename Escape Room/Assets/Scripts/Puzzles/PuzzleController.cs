@@ -17,11 +17,19 @@ public class PuzzleController : MonoBehaviour
     [SerializeField] private GameObject stage5;
     [SerializeField] private GameObject stage6;
     [SerializeField] private Timer t;
-    public string Perdeu, Ganhou;
+    [SerializeField] private GameObject _ganhou;
+    [SerializeField] private GameObject _perdeu;
+    [SerializeField] private GameObject _tempo;
+    public GameObject puzzleFio;
+    public GameObject puzzlePapel;
+    public GameObject puzzleCano;
+    public GameObject puzzleCanoDialogo;
+    public GameObject puzzleCanoDialogo1;
 
     void Start()
     {
-        
+        _perdeu.SetActive(false);
+        _ganhou.SetActive(false);
     }
 
     // Update is called once per frame
@@ -63,6 +71,7 @@ public class PuzzleController : MonoBehaviour
         else stage6.SetActive(false);
         if ((b1==true && b2==true)&&(b6==true &&((b2==true && b3==true)&&(b4==true && b5 == true))))
         {
+            puzzlePanel.SetActive(false);
             _puzzleFeito.Invoke();
             puzzlePanel.SetActive(false);
         }
@@ -75,11 +84,27 @@ public class PuzzleController : MonoBehaviour
     {
         if (tempoFaltando <= 0)
         {
-            SceneManager.LoadScene(Perdeu);
+            _tempo.SetActive(false);
+            puzzleDialogo.SetActive(false);
+            puzzlePanel.SetActive(false);
+            puzzleCanoDialogo1.SetActive(false);
+            puzzleCano.SetActive(false);
+            puzzleCanoDialogo.SetActive(false);
+            puzzleFio.SetActive(false);
+            puzzlePapel.SetActive(false);
+            _perdeu.SetActive(true);
         }
         else
         {
-            SceneManager.LoadScene(Ganhou);
+            _tempo.SetActive(false);
+            puzzleDialogo.SetActive(false);
+            puzzlePanel.SetActive(false);
+            puzzleCanoDialogo1.SetActive(false);
+            puzzleCano.SetActive(false);
+            puzzleCanoDialogo.SetActive(false);
+            puzzleFio.SetActive(false);
+            puzzlePapel.SetActive(false);
+            _ganhou.SetActive(true);
         }
 
 

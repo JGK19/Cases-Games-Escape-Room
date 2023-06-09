@@ -11,10 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Ganhou.unity
-    guid: 2802ba150a294434c918103c834066b9
-  - enabled: 1
-    path: Assets/Scenes/Perdeu.unity
-    guid: f698df17d393d09499df1d79b653513e
   m_configObjects: {}

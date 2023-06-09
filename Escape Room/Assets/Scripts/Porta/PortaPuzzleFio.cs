@@ -14,6 +14,7 @@ public class PortaPuzzleFio : MonoBehaviour
     [SerializeField] private GameObject _paredes1;
     [SerializeField] private GameObject _paredes2;
     [SerializeField]private UnityEvent _Feito;
+    public bool feito=false;
     void Start()
     {
         
@@ -22,6 +23,7 @@ public class PortaPuzzleFio : MonoBehaviour
     {
         if ((fioAmarelo.activeSelf && fioAzul.activeSelf) && (fioVerde.activeSelf && fioVermelho.activeSelf))
         {
+            feito = true;
             PuzzleFeito();
         }
     }

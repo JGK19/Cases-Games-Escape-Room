@@ -8,7 +8,7 @@ public class Puzzle_papeis : MonoBehaviour
 
     public GameObject puzzle;
     [SerializeField]
-    private bool complete;
+    public bool complete;
     [SerializeField]
     private UnityEvent _puzzleCompleto;
 
