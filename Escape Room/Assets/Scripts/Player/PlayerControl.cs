@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     private bool isMoving;
     private Vector2 input;
     private Animator animator;
+    [SerializeField] private GameObject _ui;
 
     private void Awake()
     {
@@ -17,11 +18,12 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
-        
-        
+
+        if (_ui.activeSelf) { } else { 
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
-            if (input.x != 0) input.y = 0;
+        }
+        if (input.x != 0) input.y = 0;
             /*if(input != Vector2.zero)
             {
                 animator.SetFloat("MoveX", input.x);
