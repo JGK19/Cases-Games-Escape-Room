@@ -10,7 +10,8 @@ public class PlayerControl : MonoBehaviour
     private Vector2 input;
     private Animator animator;
     [SerializeField] private GameObject _ui;
-
+    [SerializeField] private AudioSource Andando;
+    private float somaTempo=0;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -39,6 +40,13 @@ public class PlayerControl : MonoBehaviour
             if(input != Vector2.zero) { 
             animator.SetFloat("MoveX", input.x);
             animator.SetFloat("MoveY", input.y);
+            somaTempo=somaTempo+ Time.deltaTime;
+            if (somaTempo>=0.4)
+            {
+            Andando.Play();
+            somaTempo=0;
+            }
+
         }
 
 
@@ -52,6 +60,7 @@ public class PlayerControl : MonoBehaviour
             
         if (input.x != 0 || input.y != 0) isMoving = true;
         if (input.x == 0 && input.y == 0) isMoving = false;
+
 
 
         animator.SetBool("isMoving", isMoving);
